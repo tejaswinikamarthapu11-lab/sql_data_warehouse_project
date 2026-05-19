@@ -7,6 +7,10 @@ Script purpose:
    If the database exists, it is dropped and recreated. Additionally, the script sets up there up three schemas
    within the database: 'Bronze', 'silver', 'Gold'.
    
+
+
+
+
 WARNING:
   Running this script will drop the entire 'DataWarehouse' datbase if it exists.
   All data in the database will be permanently deleted. Proceed with caution
@@ -18,6 +22,8 @@ WARNING:
 
 use master;
 go
+
+
 
 -- drop and recreate the warehouse database
 if exists (selct 1 from sys.databases where name = 'DataWarehouse')
